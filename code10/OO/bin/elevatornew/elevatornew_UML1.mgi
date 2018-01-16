@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ClassDiagram>
+    <CommunicationClass name="elevatornew.ElevatorMove" x="379" y="121"/>
+    <CommunicationClass name="elevatornew.Despatcher" x="233" y="127">
+        <Communication destinationClassName="elevatornew.Elevator"/>
+    </CommunicationClass>
+    <CommunicationClass name="elevatornew.Schedule" x="573" y="210">
+        <Extension destinationClassName="elevatornew.Despatcher"/>
+        <Communication destinationClassName="elevatornew.Elevator"/>
+    </CommunicationClass>
+    <CommunicationClass name="elevatornew.Elevator" x="361" y="347">
+        <Extension destinationClassName="elevatornew.ElevatorMove"/>
+    </CommunicationClass>
+    <CommunicationClass name="elevatornew.Floor" x="466" y="53"/>
+    <CommunicationClass name="elevatornew.Request" x="164" y="285">
+        <Communication destinationClassName="elevatornew.Schedule"/>
+        <Communication destinationClassName="elevatornew.Queue"/>
+    </CommunicationClass>
+    <CommunicationClass name="elevatornew.Queue" x="95" y="80">
+        <Communication destinationClassName="elevatornew.Floor"/>
+    </CommunicationClass>
+</ClassDiagram>
